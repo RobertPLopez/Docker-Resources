@@ -18,4 +18,8 @@ service:
 
 #for mongos db you are able to link both the mongo contaitor to other containor. This is the basics on how to link containor to each other. On top of this a .YML file is needed to specificy how you want to compose your docker file. 
 
+#docker-compose up -d and the name of the service in this its mongo. This allows you to run certain commands in the propper order
+# Docker logs id number to look at the logs for induvisual container 
+# can also be done in the docker desktop app
+#Docker-compose stop to kill all of the containors
       
