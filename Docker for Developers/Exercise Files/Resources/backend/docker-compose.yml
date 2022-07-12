@@ -1,0 +1,21 @@
+version: "1"
+service: 
+  app: 
+    container_name: app
+    restart: always
+    build: . 
+    ports: 
+      - "4000:4000"
+    links: 
+      - mongo
+    mongo: 
+        container_name: mongo
+        image: mongo
+        volumes: 
+          - ./data:/data/db
+        ports: 
+          - "27017:27017"
+
+#for mongos db you are able to link both the mongo contaitor to other containor. This is the basics on how to link containor to each other. On top of this a .YML file is needed to specificy how you want to compose your docker file. 
+
+      
